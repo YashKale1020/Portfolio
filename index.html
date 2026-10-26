@@ -41,7 +41,6 @@
   </script>
 
   <style>
-    /* Glassmorphism & Custom Scrollbars */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -128,18 +127,15 @@
 
   <!-- Hero Section -->
   <header class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-24 pb-16 sm:pb-24 w-full overflow-hidden">
-    <!-- Glowing background blur accents -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-10 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="relative z-10 max-w-3xl mx-auto text-center">
-      <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ue-card border border-brand-500/30 text-brand-accent text-xs font-mono mb-6 shadow-inner">
         <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
         <span>UNREAL ENGINE 5 SPECIALIST</span>
       </div>
 
-      <!-- Title & Subtitle -->
       <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
         Real-Time Environments, <br class="hidden sm:inline"/>
         <span class="bg-gradient-to-r from-brand-400 via-brand-accent to-cyan-300 bg-clip-text text-transparent">
@@ -151,7 +147,6 @@
         Welcome to my portfolio! I build real-time interactive worlds, technical shaders, procedural mechanics, and optimized visual effects in Unreal Engine.
       </p>
 
-      <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#projects" class="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-cyan-500 hover:from-brand-600 hover:to-cyan-600 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-brand-500/25 transition duration-200 flex items-center justify-center gap-2">
           <span>Explore Work</span>
@@ -168,7 +163,6 @@
 
   <!-- Main Content: Projects Gallery -->
   <main id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex-grow w-full relative z-10">
-    <!-- Header & Category Filter Controls -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-ue-border gap-6">
       <div>
         <div class="flex items-center gap-2 text-brand-400 font-mono text-xs tracking-wider uppercase mb-1">
@@ -194,19 +188,21 @@
       </div>
     </div>
 
-    <!-- Status Banner (Shows sync state) -->
-    <div id="sync-status" class="mb-6 hidden">
-      <!-- Dynamic alert injected here if needed -->
+    <!-- Status Banner -->
+    <div id="sync-status" class="mb-6">
+      <div class="p-3 bg-ue-card border border-ue-border rounded-lg text-xs font-mono text-slate-400 flex items-center justify-between">
+        <span>Showing curated Unreal Engine showcases. <a href="https://www.artstation.com/yash_10" target="_blank" class="text-brand-accent underline">View live profile ↗</a></span>
+      </div>
     </div>
 
     <!-- Loading Spinner -->
-    <div id="loading-spinner" class="text-center py-20">
+    <div id="loading-spinner" class="text-center py-20 hidden">
       <div class="inline-block w-10 h-10 border-4 border-brand-500 border-t-transparent rounded-full animate-spin mb-4"></div>
       <p class="text-slate-400 font-mono text-sm">Syncing projects with ArtStation (yash_10)...</p>
     </div>
 
     <!-- Projects Grid Container -->
-    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 hidden">
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       <!-- Dynamic Project Cards appended here -->
     </div>
   </main>
@@ -220,7 +216,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
         <div class="bg-ue-card p-6 rounded-xl border border-ue-border">
           <div class="w-12 h-12 bg-brand-500/10 rounded-lg flex items-center justify-center text-brand-accent mb-4">
             <i data-lucide="boxes" class="w-6 h-6"></i>
@@ -234,7 +229,6 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="bg-ue-card p-6 rounded-xl border border-ue-border">
           <div class="w-12 h-12 bg-brand-500/10 rounded-lg flex items-center justify-center text-brand-accent mb-4">
             <i data-lucide="code-2" class="w-6 h-6"></i>
@@ -248,7 +242,6 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="bg-ue-card p-6 rounded-xl border border-ue-border">
           <div class="w-12 h-12 bg-brand-500/10 rounded-lg flex items-center justify-center text-brand-accent mb-4">
             <i data-lucide="zap" class="w-6 h-6"></i>
@@ -298,7 +291,7 @@
   <!-- Footer -->
   <footer class="border-t border-ue-border bg-ue-bg py-8 relative z-10 text-center text-xs text-slate-500 font-mono">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© <span id="current-year"></span> Yash. Unreal Engine Portfolio connected with ArtStation.</p>
+      <p>© <span id="current-year"></span> Yash. Unreal Engine Portfolio.</p>
       <div class="flex gap-6 text-slate-400">
         <a href="https://www.artstation.com/yash_10" target="_blank" class="hover:text-brand-accent transition">ArtStation</a>
         <a href="#projects" class="hover:text-brand-accent transition">Projects Grid</a>
@@ -306,28 +299,15 @@
     </div>
   </footer>
 
-  <!-- Lightbox Modal for Project Details -->
+  <!-- Lightbox Modal -->
   <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-ue-card border border-ue-border rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-8 my-auto" onclick="event.stopPropagation()">
-      <!-- Close Button -->
+    <div class="bg-ue-card border border-ue-border rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl relative my-8" onclick="event.stopPropagation()">
       <button onclick="closeModal()" class="absolute top-4 right-4 z-10 bg-ue-bg/80 hover:bg-ue-bg text-slate-300 hover:text-white p-2 rounded-full border border-ue-border transition">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
-      <!-- Modal Image Header -->
-      <!--<div class="relative h-64 sm:h-80 bg-slate-900 overflow-hidden">
-        <img id="modal-img" src="" alt="Project Render" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-ue-card via-transparent to-transparent"></div>
-        <div id="modal-tag" class="absolute bottom-4 left-6 px-3 py-1 rounded bg-brand-500/80 text-white font-mono text-xs font-semibold backdrop-blur">
-          Unreal Engine
-        </div>
-      </div>-->
-      <!-- Modal Media Header -->
       <div class="relative h-64 sm:h-80 bg-slate-900 overflow-hidden">
-        <!-- Static Image Tag -->
         <img id="modal-img" src="" alt="Project Render" class="w-full h-full object-cover hidden">
-        
-        <!-- Video Player Tag -->
         <video id="modal-video" src="" controls autoplay loop muted playsinline class="w-full h-full object-cover hidden"></video>
 
         <div class="absolute inset-0 bg-gradient-to-t from-ue-card via-transparent to-transparent pointer-events-none"></div>
@@ -336,15 +316,13 @@
         </div>
       </div>
 
-      <!-- Modal Content Body -->
       <div class="p-6 sm:p-8">
         <h3 id="modal-title" class="text-2xl font-bold text-white mb-3">Project Title</h3>
         
-        <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed mb-6" id="modal-description">
+        <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed mb-6 whitespace-pre-line" id="modal-description">
           Detailed project breakdown content goes here...
         </div>
 
-        <!-- Technical Metadata -->
         <div class="grid grid-cols-2 gap-4 p-4 rounded-xl bg-ue-bg border border-ue-border font-mono text-xs mb-6">
           <div>
             <span class="text-slate-500 block mb-1">ENGINE</span>
@@ -356,7 +334,6 @@
           </div>
         </div>
 
-        <!-- Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-ue-border">
           <a id="modal-artstation-link" href="#" target="_blank" rel="noopener noreferrer" 
              class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-2.5 rounded-lg transition flex items-center justify-center gap-2 text-sm">
@@ -373,36 +350,29 @@
 
   <!-- JavaScript Logic -->
   <script>
-    // Configuration
     const ARTSTATION_USERNAME = "yash_10";
     const ARTSTATION_URL = `https://www.artstation.com/${ARTSTATION_USERNAME}`;
-    // Blueprints & VFX
+
+    // Artwork URLs
     const Dhanurveda_URL = `https://www.artstation.com/artwork/0lPrzE`;
     const Soul_URL = `https://www.artstation.com/artwork/oJvK1z`;
     const DepthShift_URL = `https://www.artstation.com/artwork/q0egXN`;
     const PathPCG_URL = 'https://www.artstation.com/artwork/qJXDG2';
-    // Environment & Cinematics
     const Coast_URL = `https://www.artstation.com/artwork/Ezde08`;
     const Space_URL = `https://www.artstation.com/artwork/nJKWK6`;
     const Dune_URL = 'https://www.artstation.com/artwork/dy15n3';
     const Container_URL = 'https://www.artstation.com/artwork/y4PzvK';
-    // Modeling
     const Robo_URL = `https://www.artstation.com/artwork/8Bg4gn`;
     const Chess_URL = `https://www.artstation.com/artwork/OvKWKy`;
     const Axe_URL = 'https://www.artstation.com/artwork/lGYwbz';
+    const Create_URL = 'https://www.artstation.com/artwork/XJly20';
 
-    const RSS_URL = `https://www.artstation.com/users/${ARTSTATION_USERNAME}.rss`;
-    const PROXY_URL = `https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`;
-    
-
-    // Fallback Portfolio Items (Displayed if proxy is blocked or profile RSS is empty)
+    // Curated Portfolio Items (Reliable Showcase Mode)
     const FALLBACK_PROJECTS = [
       {
         title: "Dhanurveda - Archery",
         category: "technical",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/003/146/814/avc-bow-arrow-shots.mp4",
-        // Fallback thumbnail poster image
         image: "https://cdna.artstation.com/p/assets/covers/images/097/041/600/smaller_square/yash-kale-yash-kale-screenshot-2026-03-09-134654.jpg?1773044931",
         description: "Building a Bow Arrow Mechanism in Unreal Engine with character movements, sounds and interaction aim UI.",
         link: Dhanurveda_URL
@@ -410,127 +380,108 @@
       {
         title: "The Forgotten Coast",
         category: "environment",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/002/768/546/avc-ocean.mp4",
-        // Fallback thumbnail poster image
         image: "https://cdnb.artstation.com/p/assets/video_clips/images/090/636/329/smaller_square/yash-kale-thumb.jpg?1754430749",
-        description: "A real-time environment built in Unreal Engine, featuring a cinematic ocean-side mountain landscape. This project focuses on natural coastal formations, detailed foliage, and realistic water rendering. Dynamic lighting and atmospheric effects were used to create both moody and serene visual tones, capturing the immersive beauty of a remote island environment.",
+        description: "A real-time environment built in Unreal Engine, featuring a cinematic ocean-side mountain landscape. This project focuses on natural coastal formations, detailed foliage, and realistic water rendering.",
         link: Coast_URL
       },
       {
         title: "Souls LIKE Ashine Throne",
         category: "technical",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/002/929/166/avc-combatwithtargetlocking.mp4",
-        // Fallback thumbnail poster image
         image: "https://cdna.artstation.com/p/assets/video_clips/images/093/488/046/smaller_square/yash-kale-thumb.jpg?1762694274",
-        description: "Making a Souls like Game in UE5. I describe it with some points:\n- AI NPC Created(Enemy & also Enemy BOSS)\n- Implemented Strafe Movement(Locomotion)\n- Implemented logic for Enemy Target Locking\n- Added Combo Attack both enemy + character\n- Added Niagara Effects & Spawn Emitter for attacks so its looks super cool while attacking\n- Montage for Dodging with player controller\n- Created Chase System for AI with behavior tree (Nav Mesh)\n- Health System for our character(Represented as Green bar widget) & Enemy NPC(Represented as Red bar widget), also for Boss Enemy NPC\n- Stamina System for Our Character(Represented as Orange bar widget)\n- Inventory Slots also added(e.g. for weapon, heal potion, etc.)\n- Implemented logic for healing ability with healing potion(but now its infinitesmiley healing)\n- Weapon Pick System\n- Last but not least added environment for our game for that I use the Soul Cave that is available on Fab, in future updates I'll also adding multiple things like levels, multiple combats, enemy's, optimization etc.",
+        description: "Making a Souls like Game in UE5 with AI NPCs, Target Locking, Combo Attacks, Niagara Effects, Dodging Montages, and Behavior Trees.",
         link: Soul_URL
       },
       {
         title: "Game of Kings – 3D Chessboard",
         category: "Modeling",
         image: "https://cdnb.artstation.com/p/assets/images/images/090/635/267/large/yash-kale-3d-chessboard-persp.webp?1754428378",
-        description: "This is a realistic 3D chessboard model created entirely in Autodesk Maya. The project includes both the board and all individual chess pieces, modeled with clean geometry and accurate proportions based on traditional Staunton-style designs.The focus of this piece was to practice precision modeling, object symmetry, and scene composition, with careful attention to form and silhouette for each chess piece. The chessboard itself features subtle beveling and edge control to give it a realistic, tactile feel.",
+        description: "A realistic 3D chessboard model created entirely in Autodesk Maya featuring Staunton-style pieces with clean topology and accurate proportions.",
         link: Chess_URL
       },
       {
         title: "Cinematic Space",
         category: "environment",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/003/047/998/2nd.mp4", 
-        // Fallback thumbnail poster image
         image: "https://cdna.artstation.com/p/assets/video_clips/images/095/400/614/smaller_square/yash-kale-thumb.jpg?1768466003",
-        description: "This project focuses on recreating the high-contrast environment of Low Earth Orbit. The goal was to master the integration of external HDRIs and high-fidelity assets within Unreal Engine 5 to create a shot that feels both cinematic and scientifically grounded.",
+        description: "Recreating the high-contrast environment of Low Earth Orbit, integrating external HDRIs and high-fidelity assets within Unreal Engine 5.",
         link: Space_URL
       },
       {
         title: "Sci-Fi Robot – 3D Model",
         category: "Modeling",
         image: "https://cdnb.artstation.com/p/assets/images/images/090/635/423/large/yash-kale-robot-front.webp?1754428712",
-        description: "This is a stylized robot character modeled in Autodesk Maya, designed as a sci-fi utility/mechanic bot with a unique monowheel base and exaggerated proportions. The model was created with a focus on hard-surface modeling techniques, clean topology, and strong silhouette design.",
+        description: "A stylized robot character modeled in Autodesk Maya, designed as a sci-fi utility/mechanic bot with a monowheel base.",
         link: Robo_URL
       },
       {
         title: "Depth Shift",
         category: "technical",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/003/484/866/avc-contra-clip-5.mp4", 
-        // Fallback thumbnail poster image
         image: "https://cdna.artstation.com/p/assets/images/images/102/581/060/large/yash-kale-screenshot-20260920-111707-depth-shift.webp?1789966668",
-        description: "🎮 Android Game Prototype Showcase | 2.5D Side-Scroller Shooter Excited to share a 2.5D action side-scroller shooter prototype I created for Android, inspired by the classic mechanics of Contra while incorporating my own unique gameplay features to deliver a fresh experience!.",
+        description: "Android Game Prototype Showcase | 2.5D action side-scroller shooter prototype inspired by Contra mechanics.",
         link: DepthShift_URL
       },
       {
         title: "SciFi Create",
         category: "Modeling",
-        // Fallback thumbnail poster image
         image: "https://cdnb.artstation.com/p/assets/images/images/095/269/815/large/yash-kale-screenshot-2026-01-02-172235.webp?1768110268",
-        description: "For the Concept & Design first refine the visual language and texture direction, I utilized the Nano Banana AI model to iterate on color grading and surface details. I spent approximately 10–12 hours on the modeling and texturing process. The final asset has been implemented and tested within Unreal Engine 5 to ensure it is game-ready.",
+        description: "Hard-surface modeling and texturing process tested and implemented within Unreal Engine 5 to ensure game-readiness.",
         link: Create_URL
       },
       {
         title: "Dune Remake Shots UE5",
         category: "environment",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/003/104/288/scene2.mp4", 
-        // Fallback thumbnail poster image
-        image: "https://cdna.artstation.com/p/assets/images/images/102/581/060/large/yash-kale-screenshot-20260920-111707-depth-shift.webp?1789966668",
-        description: "Recreating the Dune movie shots in Unreal Engine 5(WIP).",
+        image: "https://cdnb.artstation.com/p/assets/images/images/090/636/881/large/yash-kale-screenshot-2025-08-06-004429.webp?1754432290",
+        description: "Recreating iconic Dune movie shots in Unreal Engine 5 with advanced atmosphere and lighting.",
         link: Dune_URL
       },
       {
         title: "Dynamic Procedural Pathway Environment | Unreal Engine PCG",
         category: "technical",
-        // Video URL string
         video: "https://cdn.artstation.com/p/video_sources/002/768/586/avc-pcg.mp4",
-        // Fallback thumbnail poster image
         image: "https://cdnb.artstation.com/p/assets/images/images/090/636/881/large/yash-kale-screenshot-2025-08-06-004429.webp?1754432290",
-        description: "Explore my latest Unreal Engine project featuring an advanced use of the PCG (Procedural Content Generation) framework to create an interactive and dynamic pathway system. The environment is designed to automatically adapt as the pathway is modified in real-time, seamlessly integrating landscape elements like trees, grass, rocks, and ground meshes. This system allows for intuitive world-building and highly flexible level design, dramatically reducing manual adjustments while maintaining natural, believable results. From dense forest paths to lakeside walkways, the entire environment interacts with the spline-based pathway system to create dynamic, immersive scenes. The project showcases both the technical graph setup and a fully realized night-time scene with realistic lighting and foliage interactions. Tools used: Unreal Engine 5, PCG Graph, Nanite, Foliage System.",
+        description: "Advanced use of the PCG (Procedural Content Generation) framework to create an interactive and dynamic pathway system.",
         link: PathPCG_URL
       },
       {
         title: "Stylized 3D Axe",
         category: "Modeling",
-        // Fallback thumbnail poster image
         image: "https://cdnb.artstation.com/p/assets/images/images/090/634/707/large/yash-kale-axe-front.webp?1754427005",
-        description: "This is a 3D model of a stylized axe created using Autodesk Maya. The project focuses on clean topology, strong silhouette design, and optimized geometry suitable for both games and cinematic use.",
+        description: "A 3D model of a stylized axe created using Autodesk Maya with clean topology and optimized geometry.",
         link: Axe_URL
       },
       {
         title: "Container City",
         category: "environment",
-        // Fallback thumbnail poster image
         image: "https://cdna.artstation.com/p/assets/images/images/090/636/688/large/yash-kale-screenshot-2025-08-06-033737.webp?1754431743",
-        description: "Container City is a real-time 3D environment built in Unreal Engine, showcasing a large-scale urban settlement constructed entirely from shipping containers. The project explores themes of vertical urban expansion, modular architecture, and industrial repurposing.",
+        description: "A real-time 3D environment built in Unreal Engine showcasing a large-scale urban settlement constructed from shipping containers.",
         link: Container_URL
-      },
+      }
     ];
 
-    let allProjects = [];
+    let allProjects = FALLBACK_PROJECTS;
 
     document.getElementById("current-year").textContent = new Date().getFullYear();
 
-    // Initialize Lucide Icons
     function updateIcons() {
       if (window.lucide) {
         lucide.createIcons();
       }
     }
 
-    // Toggle Mobile Menu
     const menuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
 
-    // Copy ArtStation Profile Link Helper
     function copyArtStationLink() {
       const link = ARTSTATION_URL;
       const textSpan = document.getElementById("copy-btn-text");
       
-      // Fallback copy execCommand
       const tempInput = document.createElement("input");
       tempInput.value = link;
       document.body.appendChild(tempInput);
@@ -544,88 +495,6 @@
       }, 2500);
     }
 
-    // Fetch and Parse Projects
-    async function initPortfolio() {
-      const spinner = document.getElementById("loading-spinner");
-      const grid = document.getElementById("projects-grid");
-      const statusBanner = document.getElementById("sync-status");
-
-      try {
-        const response = await fetch(PROXY_URL);
-        if (!response.ok) throw new Error("Network proxy error");
-        
-        const data = await response.json();
-        
-        if (data && data.contents) {
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-          const items = xmlDoc.querySelectorAll("item");
-
-          if (items.length > 0) {
-            allProjects = Array.from(items).map((item, index) => {
-              const title = item.querySelector("title")?.textContent || `Unreal Project #${index + 1}`;
-              const link = item.querySelector("link")?.textContent || ARTSTATION_URL;
-              const descHtml = item.querySelector("description")?.textContent || "";
-
-              // Extract thumbnail image URL from description HTML
-              const imgMatch = descHtml.match(/src=["'](.*?)["']/);
-              const image = imgMatch ? imgMatch[1] : 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80';
-
-              // Extract text summary from HTML
-              const tempDiv = document.createElement("div");
-              tempDiv.innerHTML = descHtml;
-              const cleanDesc = tempDiv.textContent || tempDiv.innerText || "Real-time Unreal Engine 5 showcase.";
-
-              
-              // Assign category tag based on title keywords
-              const lowerTitle = title.toLowerCase();
-              let category = "environment";
-              if (lowerTitle.includes("blueprint") || lowerTitle.includes("vfx") || lowerTitle.includes("system") || lowerTitle.includes("pcg") || lowerTitle.includes("archery")) {
-                category = "technical";
-              } else if (lowerTitle.includes("model") || lowerTitle.includes("chessboard") || lowerTitle.includes("robot") || lowerTitle.includes("maya")) {
-                category = "Modeling";
-              }
-
-              return {
-                title,
-                link,
-                image,
-                description: cleanDesc.trim(),
-                category
-              };
-            });
-
-            statusBanner.innerHTML = `
-              <div class="p-3 bg-brand-500/10 border border-brand-500/30 rounded-lg text-xs font-mono text-brand-400 flex items-center justify-between">
-                <span>✓ Successfully synced ${allProjects.length} projects live from ArtStation (@${ARTSTATION_USERNAME})</span>
-              </div>
-            `;
-            statusBanner.classList.remove("hidden");
-          } else {
-            throw new Error("No feed items found");
-          }
-        } else {
-          throw new Error("Invalid payload");
-        }
-      } catch (err) {
-        console.warn("ArtStation RSS fetch failed or blocked. Loading backup showcase projects:", err);
-        allProjects = FALLBACK_PROJECTS;
-
-        statusBanner.innerHTML = `
-          <div class="p-3 bg-ue-card border border-ue-border rounded-lg text-xs font-mono text-slate-400 flex items-center justify-between">
-            <span>Showing curated Unreal Engine showcases. <a href="${ARTSTATION_URL}" target="_blank" class="text-brand-accent underline">View live profile ↗</a></span>
-          </div>
-        `;
-        statusBanner.classList.remove("hidden");
-      } finally {
-        spinner.classList.add("hidden");
-        grid.classList.remove("hidden");
-        renderProjects(allProjects);
-        updateIcons();
-      }
-    }
-
-    // Render Project Cards in Grid
     function renderProjects(projects) {
       const grid = document.getElementById("projects-grid");
       grid.innerHTML = "";
@@ -639,17 +508,37 @@
         return;
       }
 
-      /*projects.forEach((proj, idx) => {
+      projects.forEach((proj) => {
         const card = document.createElement("div");
         card.className = "ue-card-glow bg-ue-card border border-ue-border rounded-xl overflow-hidden cursor-pointer flex flex-col group";
         card.onclick = () => openModal(proj);
 
+        const badgeText = proj.category === 'technical' ? 'Blueprint / VFX' : proj.category === 'Modeling' ? 'Modeling & Lighting' : 'Environment';
+
+        const mediaHTML = proj.video ? `
+          <video 
+            src="${proj.video}" 
+            poster="${proj.image || ''}" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </video>
+        ` : `
+          <img 
+            src="${proj.image}" 
+            alt="${proj.title}" 
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            loading="lazy" />
+        `;
+
         card.innerHTML = `
           <div class="relative h-52 bg-ue-bg overflow-hidden">
-            <img src="${proj.image}" alt="${proj.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 loading="lazy" />
-            <div class="absolute inset-0 bg-gradient-to-t from-ue-card via-transparent to-transparent opacity-80"></div>
-            <span class="absolute top-3 right-3 bg-ue-bg/80 backdrop-blur px-2.5 py-1 rounded border border-ue-border font-mono text-[10px] text-brand-accent uppercase">
-              ${proj.category === 'technical' ? 'Blueprint / VFX' : proj.category === 'Modeling' ? 'Modeling & Lighting' : 'Environment'}
+            ${mediaHTML}
+            <div class="absolute inset-0 bg-gradient-to-t from-ue-card via-transparent to-transparent opacity-80 pointer-events-none"></div>
+            <span class="absolute top-3 right-3 bg-ue-bg/80 backdrop-blur px-2.5 py-1 rounded border border-ue-border font-mono text-[10px] text-brand-accent uppercase z-10">
+              ${badgeText}
             </span>
           </div>
           <div class="p-5 flex flex-col flex-grow">
@@ -663,59 +552,11 @@
         `;
 
         grid.appendChild(card);
-      });*/
-      
-      projects.forEach((proj) => {
-      const card = document.createElement("div");
-      card.className = "ue-card-glow bg-ue-card border border-ue-border rounded-xl overflow-hidden cursor-pointer flex flex-col group";
-      card.onclick = () => openModal(proj);
-
-      const badgeText = proj.category === 'technical' ? 'Blueprint / VFX' : proj.category === 'Modeling' ? 'Modeling & Lighting' : 'Environment';
-
-      // Render Video if available, else static Image
-      const mediaHTML = proj.video ? `
-        <video 
-          src="${proj.video}" 
-          poster="${proj.image || ''}" 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </video>
-      ` : `
-        <img 
-          src="${proj.image}" 
-          alt="${proj.title}" 
-          class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
-          loading="lazy" />
-      `;
-
-      card.innerHTML = `
-        <div class="relative h-52 bg-ue-bg overflow-hidden">
-          ${mediaHTML}
-          <div class="absolute inset-0 bg-gradient-to-t from-ue-card via-transparent to-transparent opacity-80 pointer-events-none"></div>
-          <span class="absolute top-3 right-3 bg-ue-bg/80 backdrop-blur px-2.5 py-1 rounded border border-ue-border font-mono text-[10px] text-brand-accent uppercase z-10">
-            ${badgeText}
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="text-lg font-bold text-white mb-2 line-clamp-1 group-hover:text-brand-accent transition">${proj.title}</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4 line-clamp-3 flex-grow">${proj.description}</p>
-          <div class="pt-3 border-t border-ue-border/50 flex items-center justify-between text-xs font-mono text-brand-400">
-            <span>View Breakdown</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
-          </div>
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
+      });
 
       updateIcons();
     }
 
-    // Category Filter Handler
     document.querySelectorAll(".filter-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
         document.querySelectorAll(".filter-btn").forEach(b => {
@@ -737,20 +578,6 @@
       });
     });
 
-    // Lightbox Modal Controls
-    /*function openModal(project) {
-      document.getElementById("modal-img").src = project.image;
-      document.getElementById("modal-title").textContent = project.title;
-      document.getElementById("modal-description").textContent = project.description;
-      document.getElementById("modal-tag").textContent = project.category === 'technical' ? 'Blueprints & VFX' : project.category === 'Modeling' ? 'Modeling & Lighting' : 'Environment Art';
-      document.getElementById("modal-artstation-link").href = project.link;
-
-      const modal = document.getElementById("project-modal");
-      modal.classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-      updateIcons();
-    }*/
-
     function openModal(project) {
       const modalImg = document.getElementById("modal-img");
       const modalVideo = document.getElementById("modal-video");
@@ -763,7 +590,7 @@
         modalImg.src = project.image;
         modalImg.classList.remove("hidden");
         modalVideo.classList.add("hidden");
-        modalVideo.pause(); // Stop video if switching from a video project to an image project
+        modalVideo.pause();
       }
 
       document.getElementById("modal-title").textContent = project.title;
@@ -777,29 +604,22 @@
       updateIcons();
     }
 
-    /*function closeModal() {
-      const modal = document.getElementById("project-modal");
-      modal.classList.add("hidden");
-      document.body.style.overflow = "auto";
-    }*/
-
     function closeModal() {
       const modal = document.getElementById("project-modal");
       const modalVideo = document.getElementById("modal-video");
       
-      modalVideo.pause(); // Pause video playback on close
+      modalVideo.pause();
       modal.classList.add("hidden");
       document.body.style.overflow = "auto";
     }
 
-    // Close modal on escape key
     window.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeModal();
     });
 
-    // Run on load
     window.onload = () => {
-      initPortfolio();
+      renderProjects(allProjects);
+      updateIcons();
     };
   </script>
 </body>
